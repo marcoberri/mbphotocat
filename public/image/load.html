@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert Image here</title>
+</head>
+<body>
+
+	<form name="load_form" method="post" action="/image/save"
+		enctype="application/x-www-form-urlencoded">
+		<fieldset>
+			<legend>Immagine</legend>
+			Image: <input type="file" name="image" /><br />
+			Regno: <input type="text" name="regno" value="Plantae" /><br />
+			Phylum/divisione: <input type="text" name="phylum"/><br />
+			Classe: <input type="text" name="classe"/><br />
+			Ordine: <input type="text" name="ordine"/><br />
+			Famiglia: <input type="text" name="famiglia"/><br />
+			Genere: <input type="text" name="genere"/><br />
+			Specie: <input type="text" name="specie"/><br />
+			binomiale: <input type="text" name="binomiale"/><br />
+			Nome comune: <input type="text" name="comune"/><br />
+			tag_master: <select	name="master_tag">
+				<option value="fiore">fiore</option>
+				<option value="albero">albero</option>
+				<option value="arbusto">arbusto</option>
+			</select> <br /> 
+			<input type="submit" value="submit" />
+		</fieldset>
+	</form>
+</body>
+</html>
