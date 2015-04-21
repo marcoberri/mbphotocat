@@ -6,6 +6,20 @@ var morgan = require('morgan');
 var fs = require('fs');
 var responseTime = require('response-time');
 var app = express();
+var monk = require('monk');
+
+
+
+var controllerImage = require('./controller/image');
+
+
+//monk per mongo
+var db = monk(conf.MONGO);
+
+app.use(function(req,res,next){
+    req.db = db;
+    next();
+});
 
 //express response time
 app.use(responseTime())
@@ -59,7 +73,12 @@ router.use(function (req, res, next) {
 
 
 router.post('/image/save', function (req, res) {
-	  res.send('Got a PUT request at /user');
+	
+	controllerImage.save(req,res, function(err){
+		res.send('Got a PUT request at /user');
+		}
+	 );
+	  
 	});
 
 

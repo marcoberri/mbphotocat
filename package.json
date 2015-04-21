@@ -15,7 +15,9 @@
 	"morgan":"latest",
 	"response-time":"latest",
 	"body-parser":"latest",
-	"method-override":"latest"
+	"method-override":"latest",
+	"mongodb":"*",
+	"monk":"*"
 
 	}
 }
